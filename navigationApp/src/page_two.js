@@ -7,9 +7,10 @@ class PageTwo extends Component {
   // }
 
   render() {
+    const { email_user } = this.props.navigation.state.params;
     return (
       <View>
-        <Text>This is the second page!</Text>
+        <Text>Welcome, {email_user}!</Text>
         <TouchableOpacity
           onPress={() => this.props.navigation.goBack()}
           style={styles.button}
